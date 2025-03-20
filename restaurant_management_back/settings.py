@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-@74_zdvt&(xj7(k8+jtbh_%22!dme)cnh3u!&ybt!l=889--@(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     
     'rest_framework',
     'rest_framework_simplejwt',
+    'corsheaders'
 ]
 
 REST_FRAMEWORK = {
@@ -55,12 +56,16 @@ REST_FRAMEWORK = {
 
 AUTH_USER_MODEL = 'users.User'
 
+APPEND_SLASH = False
+
 from datetime import timedelta
 
 SIMPLE_JWT={
     'ACCESS_TOKEN_EXPIRY':timedelta(minutes=720),
     'REFRESH_TOKEN_EXPIRY': timedelta(days=1)
 }
+
+CORS_ALLOW_ALL_ORIGINS =True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
