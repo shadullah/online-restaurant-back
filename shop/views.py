@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from .serializers import CartSerializer,OrderSerializer, OrderItemSerializer
 from .models import Cart,Order,OrderItem
 
@@ -13,6 +13,10 @@ class CartViewSet(viewsets.ModelViewSet):
         if user_id:
             return Cart.objects.filter(user_id=user_id)
         return Cart.objects.all()
+    
+    def perform_create(self, serializer):
+        user_id=self.kwargs.get('user_id')
+        serializer.save(user_id=user_id)
     
 class OrderViewSet(viewsets.ModelViewSet):
     serializer_class = OrderSerializer
