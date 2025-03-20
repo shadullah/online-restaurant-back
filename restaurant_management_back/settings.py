@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'users',
     'restaurants',
+    'shop',
     
     'rest_framework',
     'rest_framework_simplejwt',
