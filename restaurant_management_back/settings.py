@@ -108,16 +108,26 @@ WSGI_APPLICATION = 'restaurant_management_back.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'online-restaurant-db',
+#         'USER': 'postgres',  
+#         'PASSWORD': '123', 
+#         'HOST': 'localhost',    
+#         'PORT': '5432',             
+#     }
+# }
+
+import dj_database_url
+import os
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'online-restaurant-db',
-        'USER': 'postgres',  
-        'PASSWORD': '123', 
-        'HOST': 'localhost',    
-        'PORT': '5432',             
-    }
+    'default': dj_database_url.parse(
+        "postgresql://postgres.porlgudxshkliwdcksmd:0Q2QlnJOBK9Gm4aI@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres"
+    )
 }
+
 
 
 # Password validation
