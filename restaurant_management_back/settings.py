@@ -95,7 +95,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'restaurant_management_back.wsgi.application'
+WSGI_APPLICATION = 'restaurant_management_back.wsgi.app'
 
 
 # Database
