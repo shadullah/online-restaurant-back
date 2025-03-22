@@ -106,7 +106,6 @@ python-multipart
 python-slugify
 pytweening
 pytz
-pywin32
 PyYAML
 pyzmq
 rcssmin
