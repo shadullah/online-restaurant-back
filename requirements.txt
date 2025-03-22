@@ -84,7 +84,6 @@ postgrest
 prompt_toolkit
 propcache
 psutil
-psycopg2
 psycopg2-binary
 pure_eval
 PyAutoGUI
