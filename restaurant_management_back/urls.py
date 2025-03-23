@@ -21,6 +21,7 @@ from .views import home
 from django.conf import settings
 from django.conf.urls.static import static
 
+# ebar trailing slash chara ei project kra hoise
 urlpatterns = [
     path('admin', admin.site.urls),
     path("", home),
