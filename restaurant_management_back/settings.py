@@ -124,7 +124,7 @@ import os
 
 DATABASES = {
     'default': dj_database_url.parse(
-        "postgresql://postgres.porlgudxshkliwdcksmd:0Q2QlnJOBK9Gm4aI@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres"
+        "postgresql://postgres.wlxoadahlnwxsknaluhl:jCoKOxvOsrXudiX6@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres"
     )
 }
 

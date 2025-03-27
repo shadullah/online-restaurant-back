@@ -7,7 +7,7 @@ from django.urls import path
 # router.register('', UserViewSet)
 
 urlpatterns=[
-    path('', UserViewSet.as_view({'get':'list'}), name="user-list"),
+    path('', UserViewSet.as_view({'get':'list', 'post':'create'}), name="user-list"),
     path('/<int:pk>', UserViewSet.as_view({'get':'retrieve'}), name="userDetail"),
     path('/login', LoginView.as_view())
 ]
